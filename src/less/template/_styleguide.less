@@ -1,0 +1,95 @@
+@colors: {
+	text: #222B45;
+	accent: #26345A;
+	accent2: #8F9BB3;
+	white: #fff;
+	line: #EDF1F7;
+	pink: #FFAEAD;
+	green: #85A090;
+}
+
+body {
+	font-family: Nunito;
+	color: @colors[text];
+}
+
+.h1 {
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 35px;
+}
+
+.h2 {
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 32px;
+}
+
+.h3 {
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 32px;
+}
+
+.h4 {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.h5 {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.s1 {
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.p {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.p2 {
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.l {
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.l2 {
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+@media (@md) {
+	.h1 {
+		font-size: 36px;
+		line-height: 50px;
+	}
+	
+	.h2 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+	
+	.s1 {
+		font-size: 20px;
+		line-height: 30px;
+	}
+}

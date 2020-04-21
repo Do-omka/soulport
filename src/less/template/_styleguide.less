@@ -3,6 +3,7 @@
 	accent: #26345A;
 	accent2: #8F9BB3;
 	white: #fff;
+	black:  #000;
 	line: #EDF1F7;
 	pink: #FFAEAD;
 	green: #85A090;
@@ -115,6 +116,7 @@ body {
 	border-radius: 40px;
 	transition: @tt;
 	
+	// medium size
 	&_.m {
 		padding: 15px 60px;
 	}
@@ -125,6 +127,19 @@ body {
 	}
 	&:active {
 		background-color: @colors[text];
+	}
+	
+	// alternative
+	&._a {
+		color: @colors[white];
+		background-color: @colors[accent];
+		
+		&:enter {
+			background-color: @colors[text];
+		}
+		&:active {
+			background-color: @colors[black];
+		}
 	}
 }
 

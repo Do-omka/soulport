@@ -4,6 +4,7 @@
 	accent2: #8F9BB3;
 	white: #fff;
 	black:  #000;
+	active: #551A8B;
 	line: #EDF1F7;
 	pink: #FFAEAD;
 	green: #85A090;
@@ -99,6 +100,29 @@ body {
 	.s1 {
 		font-size: 20px;
 		line-height: 30px;
+	}
+}
+
+.link {
+	text-decoration: underline;
+	border: 2px solid transparent;
+	border-radius: 4px;
+	
+	&:enter {
+		border-color: @colors[line];
+	}
+	&:active {
+		color: @colors[active];
+	}
+	
+	// alternative
+	&._a {
+		&:enter {
+			border-color: @colors[pink];
+		}
+		&:active {
+			color: @colors[pink];
+		}
 	}
 }
 

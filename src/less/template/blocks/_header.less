@@ -1,4 +1,12 @@
+body._active {
+	overflow: hidden;
+}
+
 .header {
+	position: fixed;
+	top: 0;right: 0;left: 0;
+	z-index: 3;
+	
 	&._stuck,
 	&._active {
 		background-color: @colors[white];
@@ -70,6 +78,36 @@
 				display: none;
 			}
 		}
+		&._active {
+			height: 480px;
+			
+			.header {
+				&-content,
+				&-grid {
+					height: 100%;
+				}
+				
+				&-navGrid {
+					flex-grow: 1;
+				}
+				
+				&-cell._nav {
+					flex-shrink: 1;
+					flex-grow: 1;
+					overflow: hidden;
+				}
+				
+				&-nav {
+					flex-grow: 1;
+					display: flex;
+					flex-direction: column;
+					overflow-y: auto;
+				}
+				&-navContainer {
+					flex-grow: 1;
+				}
+			}
+		}
 		
 		&-logoContainer,
 		&-navContainer {
@@ -92,7 +130,8 @@
 		&-navCell {
 			&._button {
 				align-items: stretch;
-				margin-top: 150px;
+				// margin-top: 150px;
+				margin-top: auto;
 			}
 		}
 	}

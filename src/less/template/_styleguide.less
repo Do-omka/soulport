@@ -1,3 +1,6 @@
+// media for text size change
+@m: @md;
+
 @colors: {
 	text: #222B45;
 	accent: #26345A;
@@ -22,16 +25,28 @@ body {
 	color: @colors[text];
 }
 
+// texts
 .h1 {
 	font-weight: bold;
 	font-size: 26px;
 	line-height: 35px;
+	margin-bottom: 20px;
+	
+	@media (@m) {
+		font-size: 36px;
+		line-height: 50px;
+	}
 }
 
 .h2 {
 	font-weight: bold;
 	font-size: 22px;
 	line-height: 32px;
+	
+	@media (@m) {
+		font-size: 32px;
+		line-height: 40px;
+	}
 }
 
 .h3 {
@@ -56,50 +71,35 @@ body {
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 28px;
+	
+	@media (@m) {
+		font-size: 20px;
+		line-height: 30px;
+	}
 }
 
 .p {
 	font-weight: normal;
-	font-size: 16px;
-	line-height: 22px;
-}
-
-.p2 {
-	font-weight: normal;
 	font-size: 13px;
 	line-height: 18px;
+	
+	
+	@media @m {
+		font-size: 16px;
+		line-height: 22px;
+	}
 }
 
 .l {
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 16px;
-	letter-spacing: 0.02em;
-	text-transform: uppercase;
-}
-
-.l2 {
 	font-weight: bold;
 	font-size: 10px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
-}
-
-@media (@md) {
-	.h1 {
-		font-size: 36px;
-		line-height: 50px;
-	}
 	
-	.h2 {
-		font-size: 32px;
-		line-height: 40px;
-	}
-	
-	.s1 {
-		font-size: 20px;
-		line-height: 30px;
+	@media (@m) {
+		font-size: 12px;
+		line-height: 16px;
 	}
 }
 

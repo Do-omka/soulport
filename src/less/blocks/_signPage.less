@@ -1,0 +1,90 @@
+.signPage {
+	flex-grow: 1;
+	padding-top: 120px;
+	padding-bottom: 270px;
+	background: no-repeat bottom center;
+	
+	&._in {
+		background-image: url(/img/signin.png);
+	}
+	&._up {
+		background-image: url(/img/signup.png);
+	}
+	&._forgot {
+		padding-bottom: 420px;
+		background-image: url(/img/signf.png);
+	}
+	
+	&-grid {
+		.grid();
+	}
+	
+	&-cell {
+		.cell(12);
+	}
+	
+	&-loginSocials {
+		margin-top: 30px;
+	}
+	
+	&-loginSocialsText {
+		margin-bottom: 20px;
+	}
+	
+	@media (@sm) {
+		&-cell {
+			.cell(10);
+		}
+	}
+	
+	@media (@md) {
+		&-cell {
+			.cell(7);
+		}
+	}
+	
+	@media (@xlx) {
+		.h1 {
+			font-size: 48px;
+			line-height: 55px;
+			margin-bottom: 30px;
+		}
+		
+		&-grid {
+			justify-content: center;
+		}
+		
+		&-loginSocials .socials {
+			&-grid {
+				.grid(12px);
+			}
+			
+			&-icon {
+				.square(50px);
+			}
+		}
+	}
+	
+	@media (@xl) {
+		padding-top: 200px;
+		padding-bottom: 90px;
+		background: no-repeat top right / auto 100%;
+		
+		&._up {
+			// padding-top: 180px;
+			background-image: url(/img/signup-lg.png);
+		}
+		&._in {
+			// padding-bottom: 170px;
+			background-image: url(/img/signin-lg.png);
+		}
+		&._forgot {
+			// padding-bottom: 360px;
+			background-image: url(/img/signf-lg.png);
+		}
+		
+		&-cell {
+			.cell(4);
+		}
+	}
+}

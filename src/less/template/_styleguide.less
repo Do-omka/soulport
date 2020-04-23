@@ -20,9 +20,13 @@
 @ff: Nunito;
 
 body {
-	.p1();
+	.p2();
 	font-family: @ff;
 	color: @colors[text];
+	
+	@media (@m) {
+		.p1();
+	}
 }
 
 // texts
@@ -79,28 +83,22 @@ body {
 }
 
 .p1 {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.p2 {
 	font-weight: normal;
 	font-size: 13px;
 	line-height: 18px;
-	
-	
-	@media (@m) {
-		font-size: 16px;
-		line-height: 22px;
-	}
 }
 
 .l {
 	font-weight: bold;
-	font-size: 10px;
+	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
-	
-	@media (@m) {
-		font-size: 12px;
-		line-height: 16px;
-	}
 }
 
 .link {

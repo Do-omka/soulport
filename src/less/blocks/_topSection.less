@@ -11,12 +11,20 @@
 		height: 500px;
 		padding-top: 120px;
 		background: #FBF4F2 no-repeat bottom center;
+		
+		&._subscriptions {
+			background-image: url(/img/subscriptions-p.svg);
+		}
 	}
 	
 	@media (@xl) {
 		&-content {
 			padding-top: 330px;
 			background-position-x: right;
+			
+			&._subscriptions {
+				background-image: url(/img/subscriptions-p_lg.svg);
+			}
 		}
 	}
 }

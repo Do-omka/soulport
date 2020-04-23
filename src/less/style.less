@@ -6,3 +6,18 @@
 @import 'blocks/_quote';
 @import 'blocks/_feats';
 @import 'blocks/_topSection';
+
+.subscriptionsP {
+	display: flex;
+	flex-direction: column;
+	
+	@media (@xl) {
+		&-subscriptions {
+			order: 1;
+		}
+		
+		&-quote {
+			order: 2;
+		}
+	}
+}

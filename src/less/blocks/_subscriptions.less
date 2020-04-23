@@ -17,7 +17,7 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 20px 15px 30px;
+		padding: 20px 0 30px;
 		background: @colors[white];
 		
 		&:enter {
@@ -93,6 +93,12 @@
 	
 	&-footer {
 		margin-top: auto;
+	}
+	
+	@media (@lgx) {
+		&-itemContainer {
+			.container();
+		}
 	}
 	
 	@media (@lg) {

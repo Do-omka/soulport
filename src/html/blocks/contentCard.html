@@ -1,0 +1,23 @@
+<article class='contentCard'>
+	<div class='contentCard-img'>
+		@@if (typeof tag === 'string') {
+			<div class='contentCard-tag'>
+				<div class='tag'>@@tag</div>
+			</div>
+		}
+		<img src='/img/contentCard.png' alt='Обложка' />
+	</div>
+	<div class='contentCard-content'>
+		<header class='contentCard-header'>
+			<h3 class='h4'>@@h</h3>
+		</header>
+		<div class='contentCard-body'>
+			@@body
+		</div>
+		@@if (typeof footer === 'string') {
+			<footer class='contentCard-footer'>
+				@@footer
+			</footer>
+		}
+	</div>
+</article>

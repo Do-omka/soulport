@@ -1,0 +1,16 @@
+<section class='contentList'>
+	<div class='container'>
+		<h2 class='contentList-title h2'>
+			@@title
+		</h2>
+		<div class='contentList-content'>
+			<ul class='contentList-grid'>
+				@@for (let i = 0; i < cards.length; i++) {
+				  <li class='contentList-cell'>
+	  				@@include('contentCard.html', `+(JSON.stringify(cards[i]))+`)
+		  			</li>
+				}
+			</ul>
+		</div>
+	</div>
+</section>

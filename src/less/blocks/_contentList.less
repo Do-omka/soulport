@@ -1,0 +1,32 @@
+.contentList {
+	padding-bottom: 50px;
+	
+	&-title {
+		max-width: 540px;
+		margin-bottom: 30px;
+	}
+	
+	&-grid {
+		.grid();
+	}
+	
+	@media (@lgx) {
+		&-content {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		
+		&-grid {
+			flex-wrap: nowrap;
+			margin-right: 0;
+		}
+		
+		&-cell:last-child {
+			padding-right: 0;
+		}
+	}
+	
+	@media (@lg) {
+		padding-bottom: 70px;
+	}
+}

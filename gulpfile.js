@@ -3,7 +3,6 @@
 const
 	gulp = require('gulp'),
 	rename = require('rename'),
-	pug = require('gulp-pug'),
 	newer = require('gulp-changed'),
 	includefile = require('gulp-file-include'),
 	postcss = require('gulp-postcss'),

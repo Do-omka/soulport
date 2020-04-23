@@ -1,0 +1,42 @@
+.feats {
+	.p1();
+	.section();
+	
+	&-title {
+		max-width: 500px;
+		margin-bottom: 25px;
+	}
+	
+	&-grid {
+		.grid(15px, 4px);
+	}
+	
+	&-cell {
+		.cell(12);
+	}
+	
+	&-img {
+		margin-bottom: 20px;
+	}
+	
+	&-h {
+		margin-bottom: 10px;
+	}
+	
+	@media (@sm) {
+		&-cell {
+			.cell(6);
+		}
+	}
+	
+	@media (@lg) {
+		&-title {
+			max-width: 500px;
+			margin-bottom: -10px;
+		}
+		
+		&-cell {
+			.cell(3);
+		}
+	}
+}

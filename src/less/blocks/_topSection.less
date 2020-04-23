@@ -1,0 +1,22 @@
+.topSection {
+	.section();
+	
+	&-title {
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 55px;
+	}
+	
+	&-content {
+		height: 500px;
+		padding-top: 120px;
+		background: #FBF4F2 no-repeat bottom center;
+	}
+	
+	@media (@xl) {
+		&-content {
+			padding-top: 330px;
+			background-position-x: right;
+		}
+	}
+}

@@ -101,3 +101,31 @@ if (document.querySelector('form.form')) {
 		})
 	})
 }
+
+if (document.querySelector('[data-radio-uncheck]')) {
+	document.querySelectorAll('[data-radio-uncheck]').forEach((elem)=> {
+		elem.addEventListener('click', (e)=> {
+			elem.getAttribute('data-radio-uncheck').split(', ').forEach((target)=> {
+				if (document.querySelector('[data-radio-name="'+target+'"]')) {
+					document.querySelectorAll('[data-radio-name="'+target+'"]').forEach((radio)=> {
+						radio.classList.remove('_active')
+					})
+				}
+			})
+		})
+	})
+}
+
+if (document.querySelector('[data-radio-for]')) {
+	document.querySelectorAll('[data-radio-for]').forEach((elem)=> {
+		elem.getAttribute('data-radio-for').split(', ').forEach((target)=> {
+			if (document.querySelector('[data-radio-id="'+target+'"]')) {
+				document.querySelectorAll('[data-radio-id="'+target+'"]').forEach((radio)=> {
+					elem.addEventListener('click', ()=> {
+						radio.classList.add('_active')
+					})
+				})
+			}
+		})
+	})
+}

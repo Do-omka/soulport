@@ -16,14 +16,18 @@
 	&:extend(.ifnt);
 	
 	@lock: '\E001';
-	@ruble: '\E002';
-	@search: '\E003';
+	@plus: '\E002';
+	@ruble: '\E003';
+	@search: '\E004';
 	
 	content: @@filename;
 }
 
 .ifnt-lock::before {
 	.ifnt(lock);
+}
+.ifnt-plus::before {
+	.ifnt(plus);
 }
 .ifnt-ruble::before {
 	.ifnt(ruble);

@@ -42,3 +42,38 @@
 	</article>
 }
 
+@@if (typeof empty === 'string') {
+	@@if (empty === 'promo') {
+		<article class='contentCard _promo'>
+			<div class='contentCard-promo @@promo'>
+				<h3 class='h3'>
+					@@if (promo === '_red') {
+						Откройте доступ
+						к медитациям, которые изменят твою жизнь.
+					}
+					@@if (promo === '_blue') {
+						Скидка до 40% на бесконечный доступ к медитациям, расслабляющей музыке и другому контенту.
+					}
+				</h3>
+				<button type='button' class='btn'>
+					@@if (promo === '_red') {
+						К медитациям
+					}
+					@@if (promo === '_blue') {
+						Получить
+					}
+				</button>
+			</div>
+		</article>
+	}
+	
+	@@if (empty !== 'promo') {
+		<article class='contentCard _empty'>
+			<div class='contentCard-empty'>
+				<h3 class='h4'>
+					@@empty
+				</h3>
+			</div>
+		</article>
+	}
+}

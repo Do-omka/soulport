@@ -1,0 +1,65 @@
+.accountSubscription {
+	.section();
+	
+	&-grid {
+		.grid();
+	}
+	
+	&-cell {
+		&._card {
+			.cell(12);
+		}
+	}
+	
+	&-header {
+		.h3();
+	}
+	
+	&-card {
+		padding: 20px;
+		border: 1px solid @colors[line];
+	}
+	
+	&-cardGrid {
+		.grid();
+		justify-content: space-between;
+	}
+	
+	&-cardCell {
+		&._content {
+			.cell(12);
+		}
+		&._btn {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
+	&-label {
+		.l();
+		color: @colors[accent2];
+		margin-bottom: 10px;
+	}
+	
+	&-value {
+		.s1();
+	}
+	
+	@media (@lg) {
+		padding: 40px 30px;
+		
+		&-header {
+			.h2();
+		}
+		
+		&-cardCell {
+			&._content {
+				.cell();
+			}
+			&._btn {
+				.cell(3);
+				align-self: center;
+			}
+		}
+	}
+}

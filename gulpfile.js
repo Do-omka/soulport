@@ -31,7 +31,7 @@ function html() {
 
 function css() {
 	return gulp.src('src/less/*.less', {sourcemaps: true})
-	.pipe(less_newer({getOutputFileName: file => rename(file, {dirname: 'docs/css', extname: '.css'})}))
+	// .pipe(less_newer({getOutputFileName: file => rename(file, {dirname: 'docs/css', extname: '.css'})}))
 	.pipe(less({strictMath: 'on'}))
 		.pipe(postcss([
 			require('postcss-inline-svg')({

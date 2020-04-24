@@ -1,4 +1,4 @@
-.<%= cssClass%>-base {
+.<%= cssClass%> {
 	font-family: '<%= fontName %>';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -11,7 +11,7 @@
 }
 
 .<%= cssClass%>(@filename) {
-	&:extend(.<%= cssClass%>-base);
+	&:extend(.<%= cssClass%>);
 	
 	<% _.each(glyphs, function(glyph) { %>@<%= glyph.fileName %>: '\<%= glyph.codePoint %>';
 	<% }); %>

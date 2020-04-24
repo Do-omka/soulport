@@ -84,7 +84,7 @@ function icons() {
 	 .pipe(iconfont({
 		fontName: 'icons',
 		prependUnicode: true,
-		formats: ['ttf', 'eot', 'woff', 'woff2'],
+		formats: ['svg', 'ttf', 'eot', 'woff', 'woff2'],
 		timestamp: Math.round(Date.now()/1000),
 		fontHeight: '1001',
 		normalize: true,

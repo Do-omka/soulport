@@ -1,0 +1,45 @@
+<div class='meditationsP'>
+	<div class='meditationsP-topSection'>
+		@@include('../blocks/topSection.html', {
+			"title": "Медитации",
+			"mod": "_meditations"
+		})
+	</div>
+	<div class='meditationsP-content'>
+		@@include('../blocks/contentList.html', {
+			"title": "Для новичков",
+			"cards": [
+				{
+					"player": true,
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле"
+				},
+				{
+					"player": true,
+					"played": "20",
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле"
+				},
+				{
+					"empty": "promo",
+					"promo": "_red"
+				},
+				{
+					"empty": "promo",
+					"promo": "_blue"
+				}
+			]
+		})
+	</div>
+	<div class='meditationsP-quote'>
+		@@include('../blocks/quote.html', {
+			"text": "Мы медитируем не для того, чтобы ловить идеи. Мы просто увеличиваем пространство своего сознания и выходим свежими, полными энергии, готовыми идти и теперь уже ловить идеи.",
+			"author": "Дэвид Линч"
+		})
+	</div>
+	<div class='meditationsP-subscriptions'>
+		@@include('../blocks/subscriptions.html')
+	</div>
+</div>

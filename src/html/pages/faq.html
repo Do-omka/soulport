@@ -1,0 +1,44 @@
+<div class='faqP'>
+	<div class='faqP-topSection'>
+		@@include('../blocks/topSection.html', {
+			"title": "Вопросы и ответы",
+			"mod": "_faq"
+		})
+	</div>
+	<div class='faqP-faqLabels'>
+		@@include('../blocks/faq/labels.html', {
+			"cards": [
+				{
+					"name": "service",
+					"icon": "&#xE003",
+					"header": "Работа сервиса",
+					"label": "Первые шаги, прослушивание медитаций и другого контента."
+				},
+				{
+					"name": "safety",
+					"icon": "&#xE001",
+					"header": "Безопасность",
+					"label": "Настройка пароля, изменение почты, восстановление данных."
+				},
+				{
+					"name": "subscription",
+					"icon": "&#xE002",
+					"header": "Подписка",
+					"label": "Автоматическое продление, отмена и настройка подписки."
+				}
+			]
+		})
+	</div>
+	<div class='faqP-faqTexts'>
+		@@include('../blocks/faq/texts.html', {
+			"pages": [
+				"service",
+				"safety",
+				"subscription"
+			]
+		})
+	</div>
+	<div class='faqP-subscriptions'>
+		@@include('../blocks/subscriptions.html')
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<div class='contentP'>
+	<div class='contentP-topSection'>
+		@@include('../blocks/topSection.html', {
+			"title": "Авторский </br> контент",
+			"mod": "_content"
+		})
+	</div>
+	<div class='contentP-content'>
+		@@include('../blocks/contentList.html', {
+			"title": "Измени свою жизнь вместе с нашими авторами",
+			"cards": [
+				{
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<p class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</p>",
+					"footer": "<button type='button' class='btn'>Подписаться</button>"
+				},
+				{
+					"h": "Медитации с Яной Шахназарова",
+					"body": "<p class='p'>Приведи в порядок жизнь, пройди через полный спектр познания себя и своего я.</p>",
+					"footer": "<button type='button' class='btn'>Подписаться</button>"
+				}
+			]
+		})
+	</div>
+	<div class='contentP-quote'>
+		@@include('../blocks/quote.html', {
+			"text": "Важное в медитации то, что вы все больше и больше становитесь собой.",
+			"author": "Дэвид Линч"
+		})
+	</div>
+	<div class='contentP-subscriptions'>
+		@@include('../blocks/subscriptions.html')
+	</div>
+</div>

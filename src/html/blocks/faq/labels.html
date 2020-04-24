@@ -1,0 +1,11 @@
+<section class='faqLabels'>
+	<div class='container'>
+		<ul class='faqLabels-grid'>
+			@@for (let i = 0; i < cards.length; i++) {
+			  <li class='faqLabels-cell'>
+				@@include('card.html', `+(JSON.stringify(cards[i]))+`)
+				</li>
+			}
+		</ul>
+	</div>
+</section>

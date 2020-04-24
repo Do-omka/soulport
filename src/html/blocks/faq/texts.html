@@ -1,0 +1,13 @@
+<section class='faqTexts'>
+	<ul class='faqTexts-list'>
+		@@for (let i = 0; i < pages.length; i++) {
+		  <li class='faqTexts-item' data-radio-name='faq' data-radio-id='faq-`+pages[i]+`'>
+				<div class='container'>
+					<div class='faqTexts-content'>
+						@@include('../../contents/faq/`+pages[i]+`.html')
+					</div>
+				</div>
+			</li>
+		}
+	</ul>
+</section>

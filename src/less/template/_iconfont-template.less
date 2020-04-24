@@ -5,9 +5,11 @@
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
+	line-height: 1;
 	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
 	text-decoration: none;
 	text-transform: none;
+	user-select: none;
 }
 
 .<%= cssClass%>(@filename) {
@@ -17,3 +19,8 @@
 	<% }); %>
 	content: @@filename;
 }
+
+<% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %>::before {
+	.<%= cssClass%>(<%= glyph.originalFileName ? glyph.originalFileName : glyph.fileName %>);
+}
+<% }); %>

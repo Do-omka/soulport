@@ -5,9 +5,11 @@
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
+	line-height: 1;
 	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
 	text-decoration: none;
 	text-transform: none;
+	user-select: none;
 }
 
 .ifnt(@filename) {
@@ -18,4 +20,15 @@
 	@search: '\E003';
 	
 	content: @@filename;
-}
+}
+
+.ifnt-lock::before {
+	.ifnt(lock);
+}
+.ifnt-ruble::before {
+	.ifnt(ruble);
+}
+.ifnt-search::before {
+	.ifnt(search);
+}
+

@@ -1,23 +1,44 @@
-<article class='contentCard'>
-	<div class='contentCard-img'>
-		@@if (typeof tag === 'string') {
-			<div class='contentCard-tag'>
-				<div class='tag'>@@tag</div>
-			</div>
-		}
-		<img src='/img/contentCard.png' alt='Обложка' />
-	</div>
-	<div class='contentCard-content'>
-		<header class='contentCard-header'>
-			<h3 class='h4'>@@h</h3>
-		</header>
-		<div class='contentCard-body'>
-			@@body
+@@if (typeof empty === 'undefined') {
+	<article class='contentCard'>
+		<div class='contentCard-img'>
+			@@if (typeof tag === 'string') {
+				<div class='contentCard-tag'>
+					<div class='tag'>@@tag</div>
+				</div>
+			}
+			<img src='/img/contentCard.png' alt='Обложка' />
 		</div>
-		@@if (typeof footer === 'string') {
+		<div class='contentCard-content'>
+			<header class='contentCard-header'>
+				@@if (typeof player === 'undefined') {
+					<h3 class='h4'>@@h</h3>
+				}
+				@@if (typeof player !== 'undefined') {
+					<button type='button' class='player-play'>Play</button>
+					<h3 class='h4'>@@h</h3>
+				}
+			</header>
+			<div class='contentCard-body'>
+				@@body
+			</div>
 			<footer class='contentCard-footer'>
-				@@footer
+				@@if (typeof footer === 'string') {
+					@@if (footer !== 'subscribe') {
+						<div class='contentCard-author'>@@footer</div>
+					}
+					@@if (footer === 'subscribe') {
+						<button type='button' class='btn'>Подписаться</button>
+					}
+				}
+				@@if (typeof played !== 'undefined') {
+					<div class='contentCard-played'>
+						<div class='player-time'>
+							<div class='player-played' style='width:  @@played'></div>
+						</div>
+					</div>
+				}
 			</footer>
-		}
-	</div>
-</article>
+		</div>
+	</article>
+}
+

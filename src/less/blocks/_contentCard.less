@@ -1,8 +1,10 @@
 .contentCard {
 	flex-grow: 1;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 255px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
 	
 	&-img {
 		position: relative;
@@ -17,9 +19,12 @@
 	
 	&-tag {
 		position: absolute;
+		top: 15px;
+		left: 15px;
 	}
 	
 	&-header {
+		display: flex;
 		margin-bottom: 15px;
 	}
 	
@@ -42,6 +47,31 @@
 		.btn {
 			margin-top: 20px;
 			width: 100%;
+		}
+	}
+	
+	&-author {
+		.l2();
+		color: @colors[accent2];
+		margin-top: 10px;
+	}
+	
+	&-played {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	.player {
+		&-play {
+			flex-shrink: 0;
+			align-self: flex-start;
+			.square(38px);
+			margin-right: 10px;
+		}
+		&-time {
+			height: 4px;
 		}
 	}
 }

@@ -1,6 +1,27 @@
 .player {
 	padding-bottom: 50px;
 	
+	&-inner {
+		.container();
+	}
+	
+	&._promo .player {
+		&-inner {
+			position: relative;
+			padding-bottom: 110px;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				top: 140px;right: 0;left: 0;bottom: 0;
+				background-image: svg-load('promo-bg_r.svg');
+				background-size: 100% 100%;
+				// background-position-y: 140px;
+				z-index: -1;
+			}
+		}
+	}
+	
 	&-grid {
 		.grid(15px, 10px);
 	}
@@ -13,6 +34,7 @@
 		.cell(12);
 		
 		&._img {
+			justify-content: center;
 			align-items: center;
 		}
 	}
@@ -119,6 +141,28 @@
 	
 	@media (@lg) {
 		padding-bottom: 70px;
+		
+		&._promo {
+			padding-bottom: 120px;
+			
+			.player {
+				&-inner {
+					padding-bottom: 0;
+					&::before {
+						top: 0;
+					}
+				}
+			}
+		}
+		
+		
+		&-container {
+			.container();
+		}
+		
+		&-inner {
+			padding: 0;
+		}
 		
 		&-cell {
 			&._img {

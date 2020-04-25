@@ -28,12 +28,37 @@
 			background-image: url(/img/account-p.svg);
 			background-size: auto 100%;
 		}
+		&._index {
+			height: 750px;
+			padding-top: 240px;
+			background-image: url(/img/index-p_lg.svg);
+			
+			.topSection-container {
+				display: flex;
+				flex-direction: column;
+				max-width: 485px;
+				
+				.btn {
+					margin-top: 30px;
+					
+					@media (@sm) {
+						max-width: 255px;
+					}
+				}
+			}
+			
+			@media (@mdx) {
+				height: 590px;
+				padding-top: 160px;
+				background-image: url(/img/index-p.svg);
+				// background-size: cover;
+			}
+		}
 	}
 	
 	@media (@xl) {
 		&-content {
 			padding-top: 330px;
-			background-position-x: right;
 			
 			&._subscriptions {
 				background-image: url(/img/subscriptions-p_lg.svg);

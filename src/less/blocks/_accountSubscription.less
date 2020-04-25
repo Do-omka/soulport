@@ -9,6 +9,9 @@
 		&._card {
 			.cell(12);
 		}
+		&._settings {
+			margin-left: auto;
+		}
 	}
 	
 	&-header {
@@ -35,6 +38,14 @@
 		}
 	}
 	
+	&-content {
+		display: flex;
+	}
+	
+	&-contentGrid {
+		.grid();
+	}
+	
 	&-label {
 		.l();
 		color: @colors[accent2];
@@ -45,11 +56,44 @@
 		.s1();
 	}
 	
+	&-settings {
+		display: flex;
+		align-items: center;
+		.h5();
+		color: @colors[accent2];
+		margin-top: auto;
+		margin-bottom: 8px;
+		
+		&::before {
+			content: '';
+			.square(24px);
+			background-image: svg-load('settings.svg');
+			margin-right: 5px;
+		}
+	}
+	
+	@media (@lgx) {
+		&-cell {
+			&._settings {
+				order: 1;
+				margin-left: 0;
+			}
+		}
+		
+		&-contentCell {
+			.cell(12);
+		}
+	}
+	
 	@media (@lg) {
 		padding: 40px 30px;
 		
 		&-header {
 			.h2();
+		}
+		
+		&-card {
+			padding: 40px 30px;
 		}
 		
 		&-cardCell {

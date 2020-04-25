@@ -6,17 +6,28 @@
 					Подписка
 				</h2>
 			</div>
+			<div class='accountSubscription-cell _settings'>
+				<button type='button' class='accountSubscription-settings'>
+					Изменить платежные данные
+				</button>
+			</div>
 			<div class='accountSubscription-cell _card'>
 				<div class='accountSubscription-card'>
 					<div class='accountSubscription-cardGrid'>
 						<div class='accountSubscription-cardCell _content'>
 							<div class='accountSubscription-content'>
-								<div class='accountSubscription-label'>Тариф</div>
-								<div class='accountSubscription-value'>Откройте доступ к множеству медитаций, которые изменят вашу жизнь.</div>
+								<div class='accountSubscription-contentGrid'>
+									@@for (let i = 0; i < labels.length; i++) {
+										<div class='accountSubscription-contentCell'>
+											<div class='accountSubscription-label'>`+labels[i].label+`</div>
+											<div class='accountSubscription-value'>`+labels[i].text+`</div>
+										</div>
+									}
+								</div>
 							</div>
 						</div>
 						<div class='accountSubscription-cardCell _btn'>
-							<button type='button' class='btn _a'>Выбрать тариф</button>
+							<button type='button' class='btn _a'>@@btn</button>
 						</div>
 					</div>
 				</div>

@@ -6,9 +6,16 @@
 		})
 	</div>
 	<div class='accountP-subscription'>
-		@@include('../blocks/accountSubscription.html')
+		@@include('../blocks/accountSubscription.html', {
+			"labels": [
+				{
+					"label": "тариф",
+					"text": "Откройте доступ к множеству медитаций, которые изменят вашу жизнь."
+				}
+			],
+			"btn": "Выбрать тариф"
+		})
 	</div>
-	
 	<div class='accountP-content'>
 		@@include('../blocks/contentList.html', {
 			"title": "Вы купили",

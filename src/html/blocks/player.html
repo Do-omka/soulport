@@ -1,4 +1,4 @@
-<section class='player @@if (typeof promo !== "undefined") {_promo}'>
+<section class='player @@if (typeof promo !== "undefined") {_promo} @@if (typeof replay !== "undefined") {_replay}'>
 	<div class='player-container'>
 		<div class='player-inner'>
 			<div class='player-grid'>
@@ -32,6 +32,10 @@
 										</div>
 									</div>
 								</div>
+							</div>
+							<div class='player-replay'>
+								<button type='button' class='player-replayBtn'>Replay</button>
+								<button type='button' class='btn'>Продолжить прослушивание</button>
 							</div>
 						</footer>
 					</div>

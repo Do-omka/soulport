@@ -1,0 +1,152 @@
+.player {
+	padding-bottom: 50px;
+	
+	&-grid {
+		.grid(15px, 10px);
+	}
+	
+	.cover {
+		max-width: 290px;
+	}
+	
+	&-cell {
+		.cell(12);
+		
+		&._img {
+			align-items: center;
+		}
+	}
+	
+	&-content {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	&-header {
+		margin-bottom: 10px;
+	}
+	
+	&-body {
+		margin-bottom: 20px;
+	}
+	
+	&-footer {
+		margin-top: auto;
+	}
+	
+	&-description {
+		.p1();
+	}
+	
+	&-controls {
+		display: flex;
+	}
+	
+	&-play {
+		font-size: 0;
+		.circle(60px);
+		background-image: svg-load('play.svg');
+		margin-right: 15px;
+	}
+	
+	&-time {
+		flex-grow: 1;
+		align-self: flex-end;
+		padding-bottom: 18px;
+	}
+	
+	&-timeValues {
+		display: flex;
+		justify-content: space-between;
+		font-size: 10px;
+		line-height: 16px;
+		letter-spacing: 0.02em;
+		margin-bottom: 8px;
+	}
+	
+	&-timeLine {
+		background: @colors[accent2];
+		border-radius: 4px;
+	}
+	
+	&-timePlayed {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 6px;
+		background: @colors[accent];
+		border-radius: 4px;
+	}
+	
+	&-timePoint {
+		.circle(14px);
+		background: @colors[accent];
+		// transform: translateX(50%);
+	}
+	
+	&-volume {
+		display: flex;
+		align-items: center;
+		padding-bottom: 6px;
+	}
+	
+	&-volumeBtn {
+		flex-shrink: 0;
+		.square(32px);
+		font-size: 0;
+		background-image: svg-load('volume.svg');
+		margin-right: 5px;
+	}
+	
+	&-volumeLine {
+		flex-grow: 1;
+		background: @colors[accent2];
+		border-radius: 4px;
+	}
+	
+	&-volumeLevel {
+		height: 6px;
+		background: @colors[accent];
+		border-radius: 4px;
+	}
+	
+	@media (@lgx) {
+		.player-cell._volume {
+			display: none;
+		}
+	}
+	
+	@media (@lg) {
+		padding-bottom: 70px;
+		
+		&-cell {
+			&._img {
+				.cell(3);
+			}
+			&._content {
+				.cell(6);
+			}
+			&._volume {
+				.cell(2);
+				justify-content: flex-end;
+			}
+		}
+		
+		&-content {
+			padding: 30px 0;
+		}
+		
+		&-timeValues {
+			font-size: 12px;
+		}
+		
+		&-play {
+			margin-right: 25px;
+		}
+		
+		&-body {
+			margin-bottom: 30px;
+		}
+	}
+}

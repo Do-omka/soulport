@@ -1,0 +1,11 @@
+<div class='cover'>
+	@@if (tag !== '@@tag') {
+		<div class='cover-tag'>
+			<div class='tag'>@@tag</div>
+		</div>
+	}
+	<img src='/img/
+		@@if(img === "@@img") {contentCard.png}
+		@@if(img !== "@@img") {@@img}
+	' alt='Обложка' class='cover-img' />
+</div>

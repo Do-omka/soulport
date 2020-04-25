@@ -1,13 +1,9 @@
 @@if (typeof empty === 'undefined') {
 	<article class='contentCard'>
-		<div class='contentCard-img'>
-			@@if (typeof tag === 'string') {
-				<div class='contentCard-tag'>
-					<div class='tag'>@@tag</div>
-				</div>
-			}
-			<img src='/img/contentCard.png' alt='Обложка' />
-		</div>
+		@@include('cover.html', {
+			"tag": "@@tag",
+			"img": "@@img"
+		})
 		<div class='contentCard-content'>
 			<header class='contentCard-header'>
 				@@if (typeof player === 'undefined') {

@@ -1,0 +1,88 @@
+<div class='accountP'>
+	<div class='accountP-topSection'>
+		@@include('../blocks/topSection.html', {
+			"title": "Личный кабинет",
+			"mod": "_account"
+		})
+	</div>
+	<div class='accountP-subscription'>
+		@@include('../blocks/accountSubscription.html', {
+			"settings": true,
+			"labels": [
+				{
+					"label": "тариф",
+					"text": "Обычная подписка"
+				},
+				{
+					"label": "тариф",
+					"text": "Обычная подписка"
+				},
+				{
+					"label": "тариф",
+					"text": "Обычная подписка"
+				}
+			],
+			"btn": "Сменить тариф"
+		})
+	</div>
+	<div class='accountP-content'>
+		@@include('../blocks/contentList.html', {
+			"title": "Вы купили",
+			"cards": [
+				{
+					"player": true,
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле"
+				},
+				{
+					"player": true,
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле"
+				},
+				{
+					"player": true,
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле"
+				}
+			]
+		})
+	</div>
+	<div class='accountP-content'>
+		@@include('../blocks/contentList.html', {
+			"title": "Вы купили",
+			"subtitle": "Начали слушать",
+			"tags": [
+				"3 медитации"
+			],
+			"cards": [
+				{
+					"player": true,
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле",
+					"played": "20%"
+				},
+				{
+					"player": true,
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле",
+					"played": "20%"
+				},
+				{
+					"player": true,
+					"h": "Медитации с Ириной Нельсон",
+					"body": "<div class='p'>Обуздайте свои эмоции, возьмите их под контроль, наладьте свой сон и сон своих детей.</div>",
+					"footer": "Экхарт Толле",
+					"played": "20%"
+				}
+			]
+		})
+	</div>
+	<div class='accountP-promoReferral'>
+		@@include('../blocks/promoReferral.html')
+	</div>
+</div>

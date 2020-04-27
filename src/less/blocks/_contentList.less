@@ -1,9 +1,24 @@
 .contentList {
-	padding-bottom: 50px;
+	.section();
 	
 	&-title {
 		max-width: 540px;
 		margin-bottom: 30px;
+	}
+	
+	&-subTitle {
+		margin-top: 5px;
+		margin-bottom: 23px;
+	}
+	
+	&-subTitleGrid {
+		.grid(11px);
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	&-subTitleH {
+		.h4();
 	}
 	
 	&-grid {
@@ -28,7 +43,25 @@
 		}
 	}
 	
+	@media (@sm) {
+		&-subTitleGrid {
+			justify-content: flex-start;
+		}
+	}
+	
 	@media (@xl) {
-		padding-bottom: 70px;
+		&:not(:last-child) {
+			padding-bottom: 70px;
+		}
+		
+		&-subTitle {
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		
+		&-subTitleH {
+			font-size: 22px;
+			line-height: 32px;
+		}
 	}
 }

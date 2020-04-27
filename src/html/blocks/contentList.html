@@ -3,12 +3,28 @@
 		<h2 class='contentList-title h2'>
 			@@title
 		</h2>
+		@@if (typeof subtitle === 'string') {
+			<div class='contentList-subTitle'>
+				<div class='contentList-subTitleGrid'>
+					<div class='contentList-subTitleCell'>
+						<h3 class='contentList-subTitleH'>
+							@@subtitle
+						</h3>
+					</div>
+					@@for (let i = 0; i < tags.length; i++) {
+						<div class='contentList-subTitleCell'>
+							<div class='tag'>`+tags[i]+`</div>
+						</div>
+					}
+				</div>
+			</div>
+		}
 		<div class='contentList-content'>
 			<ul class='contentList-grid'>
 				@@for (let i = 0; i < cards.length; i++) {
-				  <li class='contentList-cell'>
-	  				@@include('contentCard.html', `+(JSON.stringify(cards[i]))+`)
-		  			</li>
+					<li class='contentList-cell'>
+						@@include('contentCard.html', `+(JSON.stringify(cards[i]))+`)
+					</li>
 				}
 			</ul>
 		</div>

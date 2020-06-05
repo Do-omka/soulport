@@ -3,7 +3,7 @@
 	.section();
 	
 	&-title {
-		max-width: 500px;
+		max-width: 530px;
 		margin-bottom: 25px;
 	}
 	
@@ -31,12 +31,17 @@
 	
 	@media (@lg) {
 		&-title {
-			max-width: 500px;
 			margin-bottom: -10px;
 		}
 		
 		&-cell {
 			.cell(3);
+		}
+	}
+	
+	@media (@xl) {
+		&-h {
+			white-space: nowrap;
 		}
 	}
 }

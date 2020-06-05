@@ -10,8 +10,10 @@
 	}
 	
 	&-content {
+		max-width: 530px;
+		
 		.btn {
-			margin-top: 20px;
+			margin-top: 25px;
 			
 			@media (@sm) {
 				max-width: 255px;
@@ -72,10 +74,26 @@
 	}
 	
 	@media (@lg) {
-		&-content {
-			padding-top: 150px;
-		}
-		
 		margin: -40px 0;
+		
+		&-content {
+			position: relative;
+			padding-top: 150px;
+			
+			&::before {
+				position: absolute;
+				top: 120px;
+				left: -64px;
+				content: '';
+				width: 475px;
+				height: 404px;
+				background-image: svg-load('indexPromo-bg.svg');
+				z-index: -1;
+			}
+			
+			.btn {
+				margin-top: 40px;
+			}
+		}
 	}
 }

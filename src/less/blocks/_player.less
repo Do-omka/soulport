@@ -35,7 +35,7 @@
 	}
 	
 	&-grid {
-		.grid(15px, 10px);
+		.grid(15px, 9px);
 	}
 	
 	.cover {
@@ -62,7 +62,7 @@
 	}
 	
 	&-body {
-		margin-bottom: 20px;
+		margin-bottom: 24px;
 	}
 	
 	&-footer {
@@ -97,12 +97,12 @@
 		line-height: 16px;
 		letter-spacing: 0.02em;
 		margin-bottom: 8px;
-		cursor: pointer;
 	}
 	
 	&-timeLine {
 		background: @colors[accent2];
 		border-radius: 4px;
+		cursor: pointer;
 	}
 	
 	&-timePlayed {
@@ -150,6 +150,7 @@
 		flex-grow: 1;
 		background: @colors[accent2];
 		border-radius: 4px;
+		cursor: pointer;
 	}
 	
 	&-volumeLevel {
@@ -166,20 +167,6 @@
 	
 	@media (@lg) {
 		padding-bottom: 70px;
-		
-		&._promo {
-			padding-bottom: 120px;
-			
-			.player {
-				&-inner {
-					padding-bottom: 0;
-					&::before {
-						top: 0;
-					}
-				}
-			}
-		}
-		
 		
 		&-container {
 			.container();
@@ -215,7 +202,42 @@
 		}
 		
 		&-body {
-			margin-bottom: 30px;
+			margin-bottom: 34px;
 		}
+		
+		&._promo {
+			padding-top: 35px;
+			padding-bottom: 130px;
+			
+			.player {
+				&-inner {
+					padding-bottom: 0;
+					
+					&::before {
+						top: -10px;
+						bottom: -10px;
+					}
+				}
+				
+				&-content {
+					padding: 60px 0;
+				}
+				
+				&-cell._img {
+					flex-basis: 320px;
+					max-width: 320px;
+				}
+				
+				&-header {
+					margin-bottom: 15px;
+				}
+				
+				&-timeLine,
+				&-volumeLine {
+					background-color: #E4C5BC;
+				}
+			}
+		}
+		
 	}
 }

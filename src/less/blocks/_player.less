@@ -77,11 +77,20 @@
 		display: flex;
 	}
 	
-	&-play {
-		font-size: 0;
+	&-play,
+	&-replayBtn {
+		flex-shrink: 0;
 		.circle(60px);
-		background-image: svg-load('play.svg');
+		font-size: 0;
 		margin-right: 15px;
+	}
+	
+	&-play {
+		background-image: svg-load('play.svg');
+	}
+	
+	&-replayBtn {
+		background-image: svg-load('replay.svg');
 	}
 	
 	&-time {
@@ -123,13 +132,6 @@
 	&-replay {
 		display: flex;
 		align-items: center;
-		font-size: 0;
-	}
-	
-	&-replayBtn {
-		.circle(60px);
-		background-image: svg-load('replay.svg');
-		margin-right: 15px;
 	}
 	
 	&-volume {
